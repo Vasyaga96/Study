@@ -1,0 +1,7 @@
+<style>
+   .big { font-size: 3em; }
+   .tex {
+    font-family: serif;
+    letter-spacing: -0.1em;
+   }
+   .tex span {vertical-align: -0.2em;}

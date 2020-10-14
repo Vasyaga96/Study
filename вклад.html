@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var contribution = +prompt("Введите сумму вклада");
+	var percent = +prompt("Введите годовую процентную ставку (в рублях)");
+
+	for(var i=1; i<=5; i++){
+		contribution = contribution / 100 * percent + contribution;
+		if(i == 1){
+			alert("размер вклада по истечению " + i + " года " + contribution.toFixed(2) + "рублей");
+		} else if(i <= 5){
+			alert("размер вклада по истечению " + i + " лет " + contribution.toFixed(2) + "рублей");
+		}
+	}
+
+</script>
