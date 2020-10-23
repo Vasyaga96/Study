@@ -12,14 +12,4 @@ def print_clock(x, y):
         for l in range(((x - i) // 2) + y):
             print(end=" ")
         print_line(i)
-
-def print_main(x):
-    y = 0
-    for i in range(x, 0, -2):
-        y = y + 1  
-        print_clock(i, y)
-    y = 0
-    for i in range(x, 0, -2):
-        y = y + 1  
-        print_clock(i, y)
-print_main(5)
+print_clock(5, 3)
