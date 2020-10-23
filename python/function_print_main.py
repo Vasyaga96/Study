@@ -18,8 +18,7 @@ def print_main(x):
     for i in range(x, 0, -2):
         y = y + 1  
         print_clock(i, y)
-    y = 0
-    for i in range(x, 0, -2):
-        y = y + 1  
+    for i in range(3, x + 1, 2):
+        y = y - 1  
         print_clock(i, y)
 print_main(5)
