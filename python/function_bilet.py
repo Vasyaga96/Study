@@ -12,7 +12,7 @@ def ticket(x):
     while x > 0:
         one = sum(x)
     if one == two:
-        print("Билет счастливый")
+        return print("Билет счастливый")
     else:
-        print("Билет не счастливый")
+        return print("Билет не счастливый")
 ticket(123321)
