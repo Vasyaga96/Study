@@ -12,13 +12,13 @@ def ticket(x):
     one = x // 1000
     one = sum(one)
     if two == one:
-        return True
+        return 1
     else:
-        return False
+        return 0
 ticket(123321)
-if ticket(True):
+if ticket(1):
     print("Билет счастливый")
-else tiсket(False):
+else tiсket(0):
     print("Билет обычный")
     
 
