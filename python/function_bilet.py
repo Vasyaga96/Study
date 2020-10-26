@@ -4,7 +4,7 @@ def sum(x):
         k = x % 10
         summ = k + summ
         x = x // 10
-        return summ
+    return summ
 
 def ticket(x):
     while x > 999:
