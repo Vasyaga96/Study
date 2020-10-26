@@ -11,6 +11,15 @@ def ticket(x):
     two = sum(two)
     one = x // 1000
     one = sum(one)
+    if two == one:
+        return True
+    else:
+        return False
+ticket(123321)
+if ticket(True):
+    print("Билет счастливый")
+else tiсket(False):
+    print("Билет обычный")
     
 
 ticket(123321)
