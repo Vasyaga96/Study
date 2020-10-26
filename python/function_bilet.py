@@ -7,12 +7,10 @@ def sum(x):
     return summ
 
 def ticket(x):
-    while x > 999:
-        two = sum(x)
-    while x > 0:
-        one = sum(x)
-    if one == two:
-        return print("Билет счастливый")
-    else:
-        return print("Билет не счастливый")
+    two = x % 1000
+    two = sum(two)
+    one = x // 1000
+    one = sum(one)
+    
+
 ticket(123321)
