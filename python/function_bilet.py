@@ -1,15 +1,18 @@
 def sum(x):
-    k = 0
-    sum = 0
-    sum = k + sum
-    x = x // 10
+    summ = 0
+    while x > 0:
+        k = x % 10
+        summ = k + summ
+        x = x // 10
+        return summ
 
 def ticket(x):
     while x > 999:
-        k = x % 10
-        sum(x)
+        two = sum(x)
     while x > 0:
-        k = x % 10
-        sum(x)
-
+        one = sum(x)
+    if one == two:
+        print("Билет счастливый")
+    else:
+        print("Билет не счастливый")
 ticket(123321)
