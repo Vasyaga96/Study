@@ -12,11 +12,12 @@ def ticket(x):
     one = x // 1000
     one = sum(one)
     if two == one:
-        return 1    
-    else:
-        return 0
-answer = ticket(123324)
-if answer == 1:
+        return True    
+    return False
+
+n = int(input("Введите номер билета: "))
+ticket(n)
+if ticket(n):
     print("Билет счастливый")
 else:
     print("Билет обычный")
