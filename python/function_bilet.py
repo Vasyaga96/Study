@@ -11,9 +11,7 @@ def ticket(x):
     two = sum(two)
     one = x // 1000
     one = sum(one)
-    if two == one:
-        return True    
-    return False
+    return two == one
 
 n = int(input("Введите номер билета: "))
 ticket(n)
