@@ -2,18 +2,21 @@ number_one = int(input("Введите первое число: "))
 number_two = int(input("Введите второе число: "))
 number_three = int(input("Введите третье число: "))
 
-if number_one > number_two and number_one > number_three:
-    greatest = number_one
-elif number_two > number_one and number_two > number_three:
-    greatest = number_two
-else:
-    greatest = number_three
+def greatest(x, y, z):
+    if x > y and x > z:
+        greatest = x
+    elif y > x and y > z:
+        greatest = y
+    else:
+        greatest = z
 
-if number_one < number_two and number_one < number_three:
-    fewest = number_one
-elif number_two < number_one and number_two < number_three:
-    fewest = number_two
-else:
-    fewest = number_three
+def fewest(x, y, z):
+    if x < y and x < z:
+        fewest = x
+    elif y < x and y < z:
+        fewest = y
+    else:
+        fewest = z
 
-difference = greatest - fewest
+difference = greatest(number_one, number_two, number_three) - fewest(number_one, number_two, number_three)
+print(difference)
