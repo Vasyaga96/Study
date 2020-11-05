@@ -9,6 +9,7 @@ def greatest(x, y, z):
         greatest = y
     else:
         greatest = z
+    return greatest
 
 def fewest(x, y, z):
     if x < y and x < z:
@@ -17,6 +18,7 @@ def fewest(x, y, z):
         fewest = y
     else:
         fewest = z
+    return fewest
 
 difference = greatest(number_one, number_two, number_three) - fewest(number_one, number_two, number_three)
 print(difference)
