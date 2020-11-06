@@ -7,7 +7,7 @@ def fuc(x):
 def recursion_fuc(x):
     if x == 0 or x == 1:
         return 1
-    return fuc(x - 1) * n
+    return fuc(x - 1) * x
 
 n = int(input("Введите число: "))
 print(fuc(n))
