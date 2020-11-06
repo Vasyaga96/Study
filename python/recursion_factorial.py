@@ -5,9 +5,9 @@ def fuc(x):
     return k
 
 def recursion_fuc(x):
-    if x == 1 or x == 2:
+    if x == 0 or x == 1:
         return 1
-    return fac(n - 1) * n
+    return fuc(x - 1) * n
 
 n = int(input("Введите число: "))
 print(fuc(n))
