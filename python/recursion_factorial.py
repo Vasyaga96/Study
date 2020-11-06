@@ -1,8 +1,13 @@
+def fuc(x):
+    k = 1
+    for i in range (1, n + 1):
+        k *= i
+    return k
+
+def recursion_fuc(x):
+    fuc(1) = 1
+    fuc(2) = 1
+    return fac(n - 1) * n
+
 n = int(input("Введите число: "))
-
-def rec_fac(x):
-    if x == 1 or x == 2:
-        return 1
-    return rec_fac(x // 1) * rec_fac(x // 2)
-
-rec_fac(n)
+print(f"Факториал вашего числа + {recursion_fuc(n)}")

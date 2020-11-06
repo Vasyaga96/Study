@@ -1,7 +1,3 @@
-number_one = int(input("Введите первое число: "))
-number_two = int(input("Введите второе число: "))
-number_three = int(input("Введите третье число: "))
-
 def greatest(x, y, z):
     if x > y and x > z:
         greatest = x
@@ -20,5 +16,11 @@ def fewest(x, y, z):
         fewest = z
     return fewest
 
+number_one = int(input("Введите первое число: "))
+number_two = int(input("Введите второе число: "))
+number_three = int(input("Введите третье число: "))
+
 difference = greatest(number_one, number_two, number_three) - fewest(number_one, number_two, number_three)
+print(difference)
+
 print(difference)
