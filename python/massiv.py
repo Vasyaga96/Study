@@ -6,6 +6,9 @@ for i in range(n):
     arr.append(z)
 print()
 print(f"Ваш массив {arr}")
+
+for i in range(n):
+    print(i, arr[i])
     
 for i in range(n):    
     sum = arr[i] + sum
