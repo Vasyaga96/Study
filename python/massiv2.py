@@ -9,9 +9,8 @@ while n != 0:
     num += 1
 arr.remove(0)
 num -=1
-print(f"Ваш массив {arr}")
 for i in range(num):
-    print(f"индекс {i} значение {arr[i]}")
+    print(f"{i}. {arr[i]}")
 for i in range(num):
     composition *= arr[i]
 print(f"Произведение всех значений массива arr {composition}")
