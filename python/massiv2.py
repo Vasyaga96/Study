@@ -3,11 +3,10 @@ n = int(input("Введите значение для массива arr: "))
 arr.append(n)
 num = 1
 composition = 1
-z = 1
 while n != 0:
     n = int(input("Введите значение для массива arr: "))
     num += 1
-    arr.append(num)
+    arr.append(n)
 num -=1
 for i in range(num):
     print(f"{i}. {arr[i]}")
