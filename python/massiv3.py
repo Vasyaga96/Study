@@ -1,4 +1,5 @@
 import random
+k = 0
 otvet = 0
 arr = []
 n = int(input("Введите целое положительное число: "))
@@ -11,7 +12,12 @@ for i in range(len(arr)):
 z = int(input("Введите целое положительное число: "))
 for i in range(len(arr)):
     if arr[i] == z:
+        k += 1
         otvet = i
-        print(f"Номер {otvet}")
-    else:
-        print("такого числа нет")
+
+if k == 0:
+    print("Такого числа нет")
+else:
+    print(f"Ваш ответ {otvet}")
+        
+
