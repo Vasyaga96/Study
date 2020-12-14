@@ -3,11 +3,14 @@ arr = []
 lozh = False
 for i in range(31):
     x = random.randint(-5, 10)
+    arr.append(x)
 for i in range(len(arr)):
-    print(f"{i}, {arr[i]}", end="")
+    print(f"{i}, {arr[i]}")
 for i in range(len(arr)):
     if arr[i] < 0:
-        print("Да, отрицательные температуры были")
+        lozh = True
         break
-    else:
-        print("Нет, отрицательных температур не было")
+if lozh:
+    print("Отрицательныe температуры есть")
+else:
+    print("Отрицательных температур нет")
