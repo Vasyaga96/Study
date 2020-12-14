@@ -1,5 +1,5 @@
 import random
-k = 0
+k = False
 otvet = 0
 arr = []
 n = int(input("Введите целое положительное число: "))
@@ -11,10 +11,11 @@ for i in range(len(arr)):
 z = int(input("Введите целое положительное число: "))
 for i in range(len(arr)):
     if arr[i] == z:
-        k += 1
+        k = True
         otvet = i
-        print(f"Ваш индекс {otvet}")
         break
-if k == 0:
+if k == False:
     print("Такого числа нет")
+else:
+    print(f"Ваш индекс {otvet}")
     
