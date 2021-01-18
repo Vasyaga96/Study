@@ -1,4 +1,4 @@
-arr = [3,4,7,5]
+arr = [3,4,5,7,9]
 def pol (x,y):
     start = 0
     center = 0
@@ -7,10 +7,9 @@ def pol (x,y):
     x = sorted(x)
     end = len(x) - 1
     center = (start + end) // 2
-    while arr[center] != y:
+    while x[center] != y:
         if start >= end:
-            found = False
-            break
+            return -1
         if x[center] < y:
             start = center + 1      
         elif x[center] > y:
