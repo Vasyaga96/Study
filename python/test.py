@@ -1,11 +1,15 @@
-arr = []
-n = int(input("Введите значение для массива arr: "))
-composition = 1
-while n != 0:
-    arr.append(n)
-    n = int(input("Введите значение для массива arr: "))
-for i in range(len(arr)):
-    print(f"{i}. {arr[i]}")
-for i in range(len(arr)):
-    composition *= arr[i]
-print(f"Произведение всех значений массива arr {composition}")
+arr = [4,5,1,3,6,8,4,5]
+def sortirovka(x,y):
+    index = 0
+    for i in range(len(x) - 1):
+        index = i
+        for j in range(i, len(x)):
+            if y == True and x[index] > x[j]:
+                index = j
+                x[i], x[index] = x[index], x[i]
+            elif y == False and x[index] < x[j]:
+                index = j
+                x[i], x[index] = x[index], x[i]
+    return x
+print(sortirovka(arr, False))
+print(sortirovka(arr, True))
