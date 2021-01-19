@@ -6,6 +6,7 @@ for i in range(len(s)):
     if c == s[i]:
         index = i
         k = False
+        break
 if k:
     print("Такого символа нету")
 else:
