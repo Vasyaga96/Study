@@ -5,14 +5,15 @@ s = input("Введите строку ")
 # if s == k:
 #     print("палиндром")
 i = 0
-j = len(s)
+j = len(s) - 1
 k = True
 while i < j:
-    i += 1
-    j += 1
-    if j == i:
-        True
-    else:
+    if s[j] != s[i]:
         False
-
+    i += 1
+    j -= 1
+if k:
+    print("палиндром")
+else:
+    print("не палендром")
 
