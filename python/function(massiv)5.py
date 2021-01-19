@@ -4,7 +4,7 @@ def sortirovka(x,y):
     for i in range(len(x) - 1):
         index = i
         for j in range(i, len(x)):
-            if y == True and x[index] > x[j] or y == False and x[index] < x[j]:
+            if y and x[index] > x[j] or not y and x[index] < x[j]:
                 index = j
         x[i], x[index] = x[index], x[i]
     return x
