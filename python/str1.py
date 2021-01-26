@@ -8,12 +8,13 @@ i = 0
 j = len(s) - 1
 k = True
 while i < j:
-    if s[j] == " ":
+    while s[j] == " ":    
         j -= 1
-    if s[i] == " ":
+    while s[i] == " ":
         i += 1
     if s[j] != s[i]:
         k = False
+        break
     i += 1
     j -= 1
 
