@@ -8,10 +8,15 @@ i = 0
 j = len(s) - 1
 k = True
 while i < j:
+    if s[j] == " ":
+        j -= 1
+    if s[i] == " ":
+        i += 1
     if s[j] != s[i]:
-        False
+        k = False
     i += 1
     j -= 1
+
 if k:
     print("палиндром")
 else:
