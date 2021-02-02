@@ -15,7 +15,7 @@ while n > 0:
         three_result = ones[hund] + " " + hundred + " " + teens[ten] + " " + ones[one]
     else:
         three_result = ones[hund] + " " + hundred + " " + teens[one]
-    result = " " + orders[num_three] + " " + three_result + " " + result
+    result = three_result + " " + orders[num_three] + " " + result
     num_three += 1
     n = n // 1000
 print(result)
