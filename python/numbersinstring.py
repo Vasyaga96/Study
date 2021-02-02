@@ -11,13 +11,16 @@ while n > 0:
     one = three % 10
     ten = three % 100 // 10
     hund = three // 100
-    if ten != 1 and n >= 100:
+    if ten != 1 and hund >= 1:
         three_result = ones[hund] + " " + hundred + " " + tens[ten] + " " + ones[one]
-    elif ten != 1 and n < 100:
-        three_result = ones[hund] + " " + tens[ten] + " " + ones[one]
+    elif ten != 1 and hund < 1:
+        three_result = tens[ten] + " " + ones[one]
     else:
         three_result = ones[hund] + " " + hundred + " " + teens[one]
-    result = three_result + " " + orders[num_three] + " " + result
+    if num_three > 1 and hund <= 1:
+        result = three_result + " " + orders[num_three] + " "  + result
+    else:
+        result = three_result + " " + result
     num_three += 1
     n = n // 1000
 print(result)
