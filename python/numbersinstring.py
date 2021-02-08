@@ -6,6 +6,12 @@ hundred = "hundred"
 orders = ["", "thousand", "million", "billion"]
 result = ""
 num_three = 0
+sign = True
+if n == 0:
+    result = "zero"
+elif n < 0:
+    n *= -1
+    sign = False
 while n > 0:
     three = n % 1000
     one = three % 10
@@ -35,4 +41,6 @@ while n > 0:
         result = three_result + " " + orders[num_three] + " " + result
     num_three += 1
     n = n // 1000
+if not sign:
+    result = "minus" + " " + result
 print(result)
