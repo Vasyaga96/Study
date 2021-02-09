@@ -12,14 +12,12 @@ for i in range(len(arr)):
         print(f"{arr[i][j]} ", end="")
     print()
 Max = 0
-a = 0
 command = 0
 for i in range(len(arr)):
-    if Max < a:
-        Max = a
-    command += 1
     a = 0
     for j in range(len(arr[i])):
         a = arr[i][j] + a
+    if Max < a:
         Max = a
+        command = i + 1
 print(f"победила комманда № {command} набравшая {Max} баллов")
