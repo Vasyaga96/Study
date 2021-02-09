@@ -10,7 +10,7 @@ sign = True
 if n == 0:
     result = "zero"
 elif n < 0:
-    n *= -1
+    n  = -n
     sign = False
 while n > 0:
     three = n % 1000
