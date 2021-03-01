@@ -13,16 +13,16 @@ for i in range(len(arr)):
     print()
 Max = 0
 a = 0
-for i in range(len(arr) - 1):
-  index = i
-  for j in range(i, len(arr)):
-    for z in range(len(arr)):
-        a = 0
-        for k in range(len(arr[i])):
-            a += arr[i][j]
-        if Max < a:
-            Max = a
-            command = i + 1
-        if Max < a:
-          arr[i], arr[k] = arr[k], arr[i]
+sort = True
+while sort:
+  sort = False
+  for i in range(len(arr)):
+    Max = a
+    a = 0 
+    for j in range(len(arr[i])):
+      a += arr[i][j]
+    if Max > a:
+      arr[i], arr[i - 1] = arr[i - 1], arr[i]
+      sort = True
+      a = Max
 print(arr)
