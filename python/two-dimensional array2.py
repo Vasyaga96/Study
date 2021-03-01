@@ -12,17 +12,17 @@ for i in range(len(arr)):
         print(f"{arr[i][j]} ", end="")
     print()
 sum_prev = 0
-sum_car = 0
+sum_cur = 0
 sort = True
 while sort:
   sort = False
   for i in range(len(arr)):
-    Max = a
-    a = 0 
+    sum_prev = sum_cur
+    sum_cur = 0 
     for j in range(len(arr[i])):
-      a += arr[i][j]
-    if sum_prev < sum_car:
+      sum_cur += arr[i][j]
+    if sum_prev < sum_cur:
       arr[i], arr[i - 1] = arr[i - 1], arr[i]
       sort = True
-    a = Max
+    sum_cur = sum_prev
 print(arr)
