@@ -16,7 +16,7 @@ sum_cur = 0
 sort = True
 while sort:
   sort = False
-  for i in range(len(arr)):
+  for i in range(1, len(arr)):
     sum_prev = sum_cur
     sum_cur = 0 
     for j in range(len(arr[i])):

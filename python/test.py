@@ -1,15 +1,24 @@
-arr = [4,5,1,3,6,8,4,5]
-def sortirovka(x,y):
-    index = 0
-    for i in range(len(x) - 1):
-        index = i
-        for j in range(i, len(x)):
-            if y == True and x[index] > x[j]:
-                index = j
-                x[i], x[index] = x[index], x[i]
-            elif y == False and x[index] < x[j]:
-                index = j
-                x[i], x[index] = x[index], x[i]
-    return x
-print(sortirovka(arr, False))
-print(sortirovka(arr, True))
+import random
+n = int(input("Введите колличество комманд: "))
+m = int(input("Введите колличество соревнований: "))
+arr = []
+for i in range(n): # количество строк
+  row = []
+  for j in range(m): # количество столбцов
+    row.append(random.randint(0, 10))
+  arr.append(row)
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+        print(f"{arr[i][j]} ", end="")
+    print()
+sum_prev = 0
+sum_cur = 0
+sort = True
+sup = []
+while sort:
+    sort = False
+    for i in range(len(arr)):
+        sum_cur = 0
+        for j in range(len(arr[i])):
+            sum_cur += arr[i][j]
+        sup.append(sum_cur)
