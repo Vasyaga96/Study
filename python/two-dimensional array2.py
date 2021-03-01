@@ -11,8 +11,8 @@ for i in range(len(arr)):
     for j in range(len(arr[i])):
         print(f"{arr[i][j]} ", end="")
     print()
-Max = 0
-a = 0
+sum_prev = 0
+sum_car = 0
 sort = True
 while sort:
   sort = False
@@ -21,8 +21,8 @@ while sort:
     a = 0 
     for j in range(len(arr[i])):
       a += arr[i][j]
-    if Max > a:
+    if sum_prev < sum_car:
       arr[i], arr[i - 1] = arr[i - 1], arr[i]
       sort = True
-      a = Max
+    a = Max
 print(arr)
