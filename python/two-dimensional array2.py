@@ -28,6 +28,7 @@ while sort:
     if points[i] < points[i + 1]:
       points[i], points[i + 1] = points[i + 1], points[i]
       command[i], command[i + 1] = command[i + 1], command[i]
+      sort = True
 print("----------------------------")
 for i in range(len(arr)):
-  print(f"{command[i]} {points[i]}")
+  print(f"{i + 1} {command[i]} {points[i]}")
