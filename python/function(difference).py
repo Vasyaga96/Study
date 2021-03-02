@@ -22,5 +22,3 @@ number_three = int(input("Введите третье число: "))
 
 difference = greatest(number_one, number_two, number_three) - fewest(number_one, number_two, number_three)
 print(difference)
-
-print(difference)

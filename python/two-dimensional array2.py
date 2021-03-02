@@ -14,15 +14,20 @@ for i in range(len(arr)):
 sum_prev = 0
 sum_cur = 0
 sort = True
+points = []
+command = []
+for i in range(len(arr)):
+  command.append(i + 1)
+  sum_cur = 0
+  for j in range(len(arr[i])):
+    sum_cur += arr[i][j]
+  points.append(sum_cur)
 while sort:
   sort = False
-  for i in range(1, len(arr)):
-    sum_prev = sum_cur
-    sum_cur = 0 
-    for j in range(len(arr[i])):
-      sum_cur += arr[i][j]
-    if sum_prev < sum_cur:
-      arr[i], arr[i - 1] = arr[i - 1], arr[i]
-      sort = True
-    sum_cur = sum_prev
-print(arr)
+  for i in range(len(arr) - 1):
+    if points[i] < points[i + 1]:
+      points[i], points[i + 1] = points[i + 1], points[i]
+      command[i], command[i + 1] = command[i + 1], command[i]
+print("----------------------------")
+for i in range(len(arr)):
+  print(f"{command[i]} {points[i]}")
