@@ -12,16 +12,16 @@ for i in range(len(arr)):
         print(f"{arr[i][j]} ", end="")
     print()
 sum_prev = 0
-sum_cur = 0
+sum_current = 0
 sort = True
 points = []
 command = []
 for i in range(len(arr)):
   command.append(i + 1)
-  sum_cur = 0
+  sum_current = 0
   for j in range(len(arr[i])):
-    sum_cur += arr[i][j]
-  points.append(sum_cur)
+    sum_current += arr[i][j]
+  points.append(sum_current)
 while sort:
   sort = False
   for i in range(len(arr) - 1):
