@@ -21,7 +21,15 @@ namespace array1
             {
                 Console.Write($"{arr[i]}, ");
             }
-            Console.Write(arr[^1]);
+            Console.WriteLine(arr[^1]);
+
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            Console.Write(sum);
         }
     }
 }
