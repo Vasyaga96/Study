@@ -29,7 +29,7 @@ namespace array1
             {
                 sum += arr[i];
             }
-            Console.Write(sum);
+            Console.WriteLine(sum);
         }
     }
 }
