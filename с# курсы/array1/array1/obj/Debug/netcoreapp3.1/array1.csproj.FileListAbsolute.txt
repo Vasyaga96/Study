@@ -1,0 +1,13 @@
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.exe
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.deps.json
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.runtimeconfig.json
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.runtimeconfig.dev.json
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.dll
+C:\Study\с# курсы\array1\array1\bin\Debug\netcoreapp3.1\array1.pdb
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.csprojAssemblyReference.cache
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.AssemblyInfoInputs.cache
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.AssemblyInfo.cs
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.csproj.CoreCompileInputs.cache
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.dll
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.pdb
+C:\Study\с# курсы\array1\array1\obj\Debug\netcoreapp3.1\array1.genruntimeconfig.cache
