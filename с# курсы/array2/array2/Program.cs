@@ -6,14 +6,12 @@ namespace array2
     {
         private static int Maximum(int[] arr)
         {
-            int max = arr[0];
             int index = 0;
 
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] > max)
+                if (arr[i] > arr[index])
                 {
-                    max = arr[i];
                     index = i;
                 }
             }
