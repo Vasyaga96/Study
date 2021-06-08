@@ -28,19 +28,27 @@ namespace array2
             int numberSearch = Convert.ToInt32(Console.ReadLine());
 
 
-            Console.WriteLine(Search(arr, numberSearch));
-
-            static int Search(int[] arr, int numberSearch)
+            if (Search(arr, numberSearch) == -1)
             {
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    if (arr[i] == numberSearch)
-                    {
-                        return i;
-                    }
-                }
-                return -1;
+                Console.WriteLine("Вашего числа нет в массиве");
             }
+            else
+            {
+                Console.WriteLine($"Ваше число пол индексом {Search(arr, numberSearch)}");
+            }
+
+            
+        }
+        static int Search(int[] arr, int numberSearch)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == numberSearch)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 }
