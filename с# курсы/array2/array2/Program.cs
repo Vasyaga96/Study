@@ -27,15 +27,15 @@ namespace array2
 
             int numberSearch = Convert.ToInt32(Console.ReadLine());
 
-            int Result = Search(arr, numberSearch);
+            int result = Search(arr, numberSearch);
 
-            if (Result == -1)
+            if (result == -1)
             {
                 Console.WriteLine("Вашего числа нет в массиве");
             }
             else
             {
-                Console.WriteLine($"Ваше число пол индексом {Search(arr, numberSearch)}");
+                Console.WriteLine($"Ваше число пол индексом {result}");
             }
 
             
