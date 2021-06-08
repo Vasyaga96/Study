@@ -4,7 +4,34 @@ namespace array2
 {
     class Program
     {
-        public static int max;
+        private static int Maximum(int[] arr)
+        {
+            int max = arr[0];
+            int index = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
+
+        static int Search(int[] arr, int numberSearch)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == numberSearch)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Введите размер массива");
@@ -24,22 +51,8 @@ namespace array2
             }
             Console.WriteLine(arr[^1]);
 
-            max = Maximum(arr);
-            Console.WriteLine($"Самое большое число в массиве {max}");
-
-        }
-        private static int Maximum(int[] arr)
-        {
-            max = arr[0];
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] > max)
-                {
-                    max = arr[i];
-                }
-            }
-            return max;
+            int max = Maximum(arr);
+            Console.WriteLine($"Самое большое число в массиве {arr[max]} под инсдексом {max}");
         }
     }
 }
