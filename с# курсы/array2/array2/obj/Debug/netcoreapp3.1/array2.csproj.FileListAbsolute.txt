@@ -1,0 +1,13 @@
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.exe
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.deps.json
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.runtimeconfig.json
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.runtimeconfig.dev.json
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.dll
+C:\Study\с# курсы\array2\array2\bin\Debug\netcoreapp3.1\array2.pdb
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.csprojAssemblyReference.cache
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.AssemblyInfoInputs.cache
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.AssemblyInfo.cs
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.csproj.CoreCompileInputs.cache
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.dll
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.pdb
+C:\Study\с# курсы\array2\array2\obj\Debug\netcoreapp3.1\array2.genruntimeconfig.cache
