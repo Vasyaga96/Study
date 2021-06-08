@@ -27,8 +27,9 @@ namespace array2
 
             int numberSearch = Convert.ToInt32(Console.ReadLine());
 
+            int Result = Search(arr, numberSearch);
 
-            if (Search(arr, numberSearch) == -1)
+            if (Result == -1)
             {
                 Console.WriteLine("Вашего числа нет в массиве");
             }
