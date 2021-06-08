@@ -25,14 +25,21 @@ namespace array2
 
             Console.WriteLine("Введите число которое надо найти: ");
             int numberSearch = Convert.ToInt32(Console.ReadLine());
+            bool chek = true;
 
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] == numberSearch)
                 {
                     Console.WriteLine($"Ваше число {numberSearch} в массиве под индексом {i}");
+                    chek = false;
                     break;
                 }
+            }
+
+            if (chek)
+            {
+                Console.WriteLine("Вашего числа нету в массиве");
             }
         }
     }
