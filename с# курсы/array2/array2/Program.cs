@@ -4,6 +4,7 @@ namespace array2
 {
     class Program
     {
+        public static int max;
         static void Main(string[] args)
         {
             Console.WriteLine("Введите размер массива");
@@ -23,33 +24,22 @@ namespace array2
             }
             Console.WriteLine(arr[^1]);
 
-            Console.WriteLine("Введите число которое надо найти: ");
+            max = Maximum(arr);
+            Console.WriteLine($"Самое большое число в массиве {max}");
 
-            int numberSearch = Convert.ToInt32(Console.ReadLine());
-
-            int result = Search(arr, numberSearch);
-
-            if (result == -1)
-            {
-                Console.WriteLine("Вашего числа нет в массиве");
-            }
-            else
-            {
-                Console.WriteLine($"Ваше число пол индексом {result}");
-            }
-
-            
         }
-        static int Search(int[] arr, int numberSearch)
+        private static int Maximum(int[] arr)
         {
+            max = arr[0];
+
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] == numberSearch)
+                if (arr[i] > max)
                 {
-                    return i;
+                    max = arr[i];
                 }
             }
-            return -1;
+            return max;
         }
     }
 }
