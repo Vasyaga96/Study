@@ -94,8 +94,8 @@ namespace array2
             int min = Minimum(arr);
             Console.WriteLine($"Самое маленькое число в массиве {arr[min]} под индексом {min}");
 
-            Console.WriteLine(RandomArr(n, 1, 10));
+            Console.WriteLine("Рандомный массив");
+            Seal(RandomArr(n, 1, 10));
         }
     }
 }
-a
