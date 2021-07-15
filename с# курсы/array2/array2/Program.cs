@@ -78,6 +78,27 @@ namespace array2
             Console.WriteLine(array[^1]);
         }
 
+        /*Метод сортировки пузырём*/
+        static int[] sort(int[] arr)
+        {
+            bool sortBool = true;
+            while (sortBool)
+            {
+                sortBool = false;
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        int k = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = k;
+                        sortBool = true;
+                    }
+                }
+            }
+            return arr;
+        }
+
             static void Main(string[] args)
         {
 
@@ -96,6 +117,10 @@ namespace array2
 
             Console.WriteLine("Рандомный массив");
             Seal(RandomArr(n, 1, 10));
+
+            Console.WriteLine("Сортировка рандомного массива");
+            int [] randomArr = RandomArr(n, 1, 10);
+            Seal(sort(randomArr));
         }
     }
 }

@@ -10,9 +10,9 @@ for i in range(len(arr)):
     print(f"{i}, {arr[i]}")
 while sort:
     sort = False
-    for j in range(len(arr) - 1):
-        if arr[j] > arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    for i in range(len(arr) - 1):
+        if arr[i] > arr[i + 1]:
+            arr[i], arr[i + 1] = arr[i + 1], arr[i]
             sort = True
 print("--------------")
 for i in range(len(arr)):
