@@ -1,6 +1,5 @@
 import random
 arr = []
-k = 0
 sort = True
 n = int(input("Введите целое положительное число: "))
 for i in range(n):

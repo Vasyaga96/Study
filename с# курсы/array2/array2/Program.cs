@@ -81,10 +81,10 @@ namespace array2
         /*Метод сортировки пузырём*/
         static int[] sort(int[] arr)
         {
-            bool sortBool = true;
-            while (sortBool)
+            bool needSort = true;
+            while (needSort)
             {
-                sortBool = false;
+                needSort = false;
                 for (int i = 0; i < arr.Length - 1; i++)
                 {
                     if (arr[i] > arr[i + 1])
@@ -92,17 +92,55 @@ namespace array2
                         int k = arr[i];
                         arr[i] = arr[i + 1];
                         arr[i + 1] = k;
-                        sortBool = true;
+                        needSort = true;
                     }
                 }
             }
             return arr;
         }
 
+        /*Метод нахождения половинным делением*/
+
+        static void HalfIntervalMethod(int[] array, int number)
+        {
+            int start = 0;
+            int center = 0;
+            int end = 0;
+            bool found = true;
+            /*end = number - 1  почему то в пайтоне было вот так*/
+            end = number;
+            center = (start + end) / 2;
+            while (array[center] != number)
+            {
+                if (start >= end)
+                {
+                    found = false;
+                    break;
+                }
+                if (array[center] < number)
+                {
+                    start = center + 1;
+                }
+                else if (array[center] > number)
+                {
+                    end = center - 1;
+                }
+                center = (start + end) / 2;
+            }
+            if (found)
+            {
+                Console.WriteLine($"Ваше число под индексом {center}");
+            }
+            else
+            {
+                Console.WriteLine("Такого числа нету");
+            }
+        }
+
             static void Main(string[] args)
         {
 
-            Console.WriteLine("Введите размер массива");
+            /*Console.WriteLine("Введите размер массива");
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] arr = Input(n);
@@ -120,7 +158,15 @@ namespace array2
 
             Console.WriteLine("Сортировка рандомного массива");
             int [] randomArr = RandomArr(n, 1, 10);
-            Seal(sort(randomArr));
+            Seal(sort(randomArr));*/
+
+            int[] arrayForHalfIntervalMethod = new int[10];
+            for (int i = 0; i <= arrayForHalfIntervalMethod.Length - 1; i++)
+            {
+                arrayForHalfIntervalMethod[i] = i + 1;
+            }
+            Seal(arrayForHalfIntervalMethod);
+            HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
         }
     }
 }

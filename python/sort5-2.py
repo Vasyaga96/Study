@@ -23,6 +23,6 @@ while arr[center] != k:
        end = center - 1 
     center = (start + end) // 2
 if found:
-    print(f"ваше число {center}")
+    print(f"ваше число под индексом {center}")
 else:
     print("Такого числа нету")
