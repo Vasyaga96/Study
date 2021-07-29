@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace array2
 {
@@ -107,12 +108,11 @@ namespace array2
             int center = 0;
             int end = 0;
             bool found = true;
-            /*end = number - 1  почему то в пайтоне было вот так*/
-            end = number;
+            end = array.Length - 1;
             center = (start + end) / 2;
             while (array[center] != number)
             {
-                if (start >= end)
+                if (start > end)
                 {
                     found = false;
                     break;
@@ -160,13 +160,92 @@ namespace array2
             int [] randomArr = RandomArr(n, 1, 10);
             Seal(sort(randomArr));*/
 
-            int[] arrayForHalfIntervalMethod = new int[10];
+            /*int[] arrayForHalfIntervalMethod = new int[10];
             for (int i = 0; i <= arrayForHalfIntervalMethod.Length - 1; i++)
             {
                 arrayForHalfIntervalMethod[i] = i + 1;
             }
             Seal(arrayForHalfIntervalMethod);
-            HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
+            HalfIntervalMethod(arrayForHalfIntervalMethod, 3);*/
+
+            /*Console.WriteLine("Создание динамического массива и подсчёт суммы");
+            List<int> array = new List<int>();
+
+            int sum = 0;
+
+            Console.WriteLine("Введите число");
+            int n = Convert.ToInt32(Console.ReadLine());
+            while (n != 0)
+            {
+                array.Add(n);
+                n = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 0; i < array.Count - 1; i++)
+            {
+                Console.Write($"{array[i]},");
+            }
+            Console.WriteLine(array[array.Count - 1]);
+
+
+            for (int i = 0; i < array.Count; i++)
+            {
+                sum += array[i];
+            }
+
+            Console.WriteLine($"Сумма ваших чисел {sum}");*/
+
+
+            /*Console.WriteLine("Нахождение максимальной последовательности");
+            Console.WriteLine("Введите размер массива");
+            int size = Convert.ToInt32(Console.ReadLine());
+            List<int> arr = new List<int>();
+            Random rnd = new Random();
+
+            for (int i = 0; i < size; i++)
+            {
+                arr.Add(rnd.Next(1, 100));
+            }
+
+            for (int i = 0; i < arr.Count - 2; i++)
+            {
+                Console.Write($"{arr[i]},");
+            }
+            Console.WriteLine($"{arr[arr.Count - 1]}");
+
+            List<int> sequenceLength = new List<int>();
+
+
+            List<int> sequence = new List<int>();
+            sequence.Add(arr[0]);
+
+            for (int i = 1; i < arr.Count; i++)
+            {
+                if (arr[i] >= arr[i - 1])
+                {
+                    sequence.Add(arr[i]);
+                }
+                else
+                {
+                    sequenceLength.Add(sequence.Count);
+                    int memorLength = sequence.Count;
+                    for (int j = memorLength - 1; j >= 0; j--)
+                    {
+                        sequence.RemoveAt(j);
+                    }
+                    sequence.Add(arr[i]);
+                }
+            }
+            sequenceLength.Add(sequence.Count);
+            int max = 0;
+            for (int i = 1; i < sequenceLength.Count; i++)
+            {
+                if (sequenceLength[i] >= sequenceLength[max])
+                {
+                    max = i;
+                }
+            }
+            Console.WriteLine($"Максимальная последовательность {max}");*/
         }
     }
 }
