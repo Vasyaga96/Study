@@ -16,8 +16,6 @@ namespace array2
             }
             return randomArr;
         }
-
-
         /*Метод для ввода чисел в созданный массив размером size*/
         static int[] Input(int size)
         {
@@ -43,8 +41,8 @@ namespace array2
             }
             return index;
         }
-            /*Метод поиска индекса максимального числа массива*/
-            private static int Maximum(int[] arr)
+        /*Метод поиска индекса максимального числа массива*/
+        private static int Maximum(int[] arr)
         {
             int index = 0;
 
@@ -78,7 +76,6 @@ namespace array2
             }
             Console.WriteLine(array[^1]);
         }
-
         /*Метод сортировки пузырём*/
         static int[] sort(int[] arr)
         {
@@ -99,10 +96,8 @@ namespace array2
             }
             return arr;
         }
-
         /*Метод нахождения половинным делением*/
-
-        static void HalfIntervalMethod(int[] array, int number)
+        static int HalfIntervalMethod(int[] array, int number)
         {
             int start = 0;
             int center = 0;
@@ -126,78 +121,94 @@ namespace array2
                     end = center - 1;
                 }
                 center = (start + end) / 2;
-            }
-            if (found)
-            {
-                Console.WriteLine($"Ваше число под индексом {center}");
-            }
-            else
-            {
-                Console.WriteLine("Такого числа нету");
+
+                if (found)
+                {
+                    return center;
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
-
-            static void Main(string[] args)
+        /*Метод создание динамического массива*/
+        static List<int> DinamicArray()
         {
+            List<int> array = new List<int>();
+            Console.WriteLine("Введите число");
+            int z = Convert.ToInt32(Console.ReadLine());
+            while (z != 0)
+            {
+                array.Add(z);
+                z = Convert.ToInt32(Console.ReadLine());
+            }
+            return array;
+        }
+        /*Метод вывода динамического массива*/
+        static void SealDinamicArray(List<int> array)
+        {
+            for (int i = 0; i < array.Count - 1; i++)
+            {
+                Console.Write($"{array[i]},");
+            }
+            Console.WriteLine(array[array.Count - 1]);
+        }
+        /*Метод подсчёта суммы динамического массива*/
+        static int SumDinamicArray(List<int> dinamicArray)
+        {
+            int sum = 0;
+            for (int i = 0; i < dinamicArray.Count; i++)
+            {
+                sum += dinamicArray[i];
+            }
+            return sum;
+        }
 
-            /*Console.WriteLine("Введите размер массива");
-            int n = Convert.ToInt32(Console.ReadLine());
+        static void Main(string[] args)
+        {
+            /*Ввод и печать массива*/
+            Console.WriteLine("Введите размер массива");
+            int size = Convert.ToInt32(Console.ReadLine());
 
-            int[] arr = Input(n);
+            int[] arr = Input(size);
 
             Seal(arr);
 
+            /*Нахождение максимального минимального числа в массиве*/
             int max = Maximum(arr);
             Console.WriteLine($"Самое большое число в массиве {arr[max]} под инсдексом {max}");
 
             int min = Minimum(arr);
             Console.WriteLine($"Самое маленькое число в массиве {arr[min]} под индексом {min}");
 
-            Console.WriteLine("Рандомный массив");
-            Seal(RandomArr(n, 1, 10));
+            /*Рандомный массив*/
+            Seal(RandomArr(size, 1, 10));
 
-            Console.WriteLine("Сортировка рандомного массива");
-            int [] randomArr = RandomArr(n, 1, 10);
-            Seal(sort(randomArr));*/
+            /*Сортировка рандомного массива*/
+            int[] randomArr = RandomArr(size, 1, 10);
+            Seal(sort(randomArr));
 
-            /*int[] arrayForHalfIntervalMethod = new int[10];
-            for (int i = 0; i <= arrayForHalfIntervalMethod.Length - 1; i++)
-            {
-                arrayForHalfIntervalMethod[i] = i + 1;
-            }
+            /*Поиск половинным делением*/
+            int[] arrayForHalfIntervalMethod = RandomArr(size, 1, 10);
             Seal(arrayForHalfIntervalMethod);
-            HalfIntervalMethod(arrayForHalfIntervalMethod, 3);*/
+            int foundIndexNumber = HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
+            if (foundIndexNumber > 0)
+                {
+                    Console.WriteLine($"Ваше число под индексом {foundIndexNumber}");
+                } 
+            else
+                {
+                    Console.WriteLine($"Такого числа нету");
+                }
 
-            /*Console.WriteLine("Создание динамического массива и подсчёт суммы");
-            List<int> array = new List<int>();
+            /*Создание динамического массива и подсчет суммы*/
+            List<int> dinamicArray = DinamicArray();
+            SealDinamicArray(dinamicArray);           
+            Console.WriteLine($"Сумма ваших чисел {SumDinamicArray(dinamicArray)}");
 
-            int sum = 0;
-
-            Console.WriteLine("Введите число");
-            int n = Convert.ToInt32(Console.ReadLine());
-            while (n != 0)
-            {
-                array.Add(n);
-                n = Convert.ToInt32(Console.ReadLine());
-            }
-
-            for (int i = 0; i < array.Count - 1; i++)
-            {
-                Console.Write($"{array[i]},");
-            }
-            Console.WriteLine(array[array.Count - 1]);
-
-
-            for (int i = 0; i < array.Count; i++)
-            {
-                sum += array[i];
-            }
-
-            Console.WriteLine($"Сумма ваших чисел {sum}");*/
-
-
-            /*Console.WriteLine("Нахождение максимальной последовательности");
-            Console.WriteLine("Введите размер массива");
+            /*Нахождение максимальной последовательности*/
+            /*Console.WriteLine("Введите размер массива");
             int size = Convert.ToInt32(Console.ReadLine());
             List<int> arr = new List<int>();
             Random rnd = new Random();
