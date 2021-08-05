@@ -166,31 +166,9 @@ namespace array2
         }
 
         static void Main(string[] args)
-        {
-            /*Ввод и печать массива*/
-            Console.WriteLine("Введите размер массива");
-            int size = Convert.ToInt32(Console.ReadLine());
-
-            int[] arr = Input(size);
-
-            Seal(arr);
-
-            /*Нахождение максимального минимального числа в массиве*/
-            int max = Maximum(arr);
-            Console.WriteLine($"Самое большое число в массиве {arr[max]} под инсдексом {max}");
-
-            int min = Minimum(arr);
-            Console.WriteLine($"Самое маленькое число в массиве {arr[min]} под индексом {min}");
-
-            /*Рандомный массив*/
-            Seal(RandomArr(size, 1, 10));
-
-            /*Сортировка рандомного массива*/
-            int[] randomArr = RandomArr(size, 1, 10);
-            Seal(sort(randomArr));
-
+        {            
             /*Поиск половинным делением*/
-            int[] arrayForHalfIntervalMethod = RandomArr(size, 1, 10);
+            int[] arrayForHalfIntervalMethod = RandomArr(10, 1, 10);
             Seal(arrayForHalfIntervalMethod);
             int foundIndexNumber = HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
             if (foundIndexNumber > 0)
