@@ -248,7 +248,7 @@ namespace array2
                     {
                         maxSequence = sequence;
                     }
-                    sequence = 0;
+                    sequence = 1;
                 }            
             }
             return maxSequence;
