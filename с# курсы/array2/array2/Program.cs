@@ -1,11 +1,22 @@
-﻿using System;
+﻿#region using
+using System;
 using System.Collections.Generic;
-
+#endregion
+#region namespace
 namespace array2
 {
+    #endregion
+    #region class Program
     class Program
     {
-        /*метод генерации массива случайным образом*/
+        #endregion
+        /// <summary>
+        /// Метод генерации массива случайным образом
+        /// </summary>
+        /// <param name="size">размер массива</param>
+        /// <param name="startRange">начало случайных чисел</param>
+        /// <param name="endRange">конец случайных чисел</param>
+        /// <returns>Массив случайных чисел</returns>
         static int[] RandomArr(int size, int startRange, int endRange)
         {
             int[] randomArr = new int [size];
@@ -16,7 +27,11 @@ namespace array2
             }
             return randomArr;
         }
-        /*Метод для ввода чисел в созданный массив размером size*/
+        /// <summary>
+        /// Метод для ввода чисел пользователем в массив с заданным размером
+        /// </summary>
+        /// <param name="size">размер массива</param>
+        /// <returns>Массив с введенными пользователем числами</returns>
         static int[] Input(int size)
         {
             int[] arr = new int[size];
@@ -27,8 +42,12 @@ namespace array2
             }
             return arr;
         }
-        /*Метод поиска индекса минимального числа массива*/
-        private static int Minimum(int[] arr)
+        /// <summary>
+        /// Метод поиска индекса минимального числа массива
+        /// </summary>
+        /// <param name="arr">массив</param>
+        /// <returns>Индекс минимального числа массива arr</returns>
+        private static int MinimumNumberInArray(int[] arr)
         {
             int index = 0;
 
@@ -41,8 +60,12 @@ namespace array2
             }
             return index;
         }
-        /*Метод поиска индекса максимального числа массива*/
-        private static int Maximum(int[] arr)
+        /// <summary>
+        /// Метод поиска индекса максимального числа массива
+        /// </summary>
+        /// <param name="arr">массив</param>
+        /// <returns>Индекс максимального числа массива arr</returns>
+        private static int MaximumNumberInArray(int[] arr)
         {
             int index = 0;
 
@@ -55,8 +78,13 @@ namespace array2
             }
             return index;
         }
-        /*Метод для поиска определенного числа, принимает массив и число которое нужно найти*/
-        static int Search(int[] arr, int numberSearch)
+        /// <summary>
+        /// Метод для поиска индекса числа в массиве
+        /// </summary>
+        /// <param name="arr">массив</param>
+        /// <param name="numberSearch">число которое нужно найти</param>
+        /// <returns>Индекс найденного числа</returns>
+        static int SearchIndexNumber(int[] arr, int numberSearch)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -67,8 +95,11 @@ namespace array2
             }
             return -1;
         }
-        /*Метод для печати массива принимает массив*/
-        static void Seal(int[] array)
+        /// <summary>
+        /// Метод для печати статического массива
+        /// </summary>
+        /// <param name="array">статический массив</param>
+        static void SealArray(int[] array)
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
@@ -76,7 +107,11 @@ namespace array2
             }
             Console.WriteLine(array[^1]);
         }
-        /*Метод сортировки пузырём*/
+        /// <summary>
+        /// Метод сортировки пузырём
+        /// </summary>
+        /// <param name="arr">статический массив</param>
+        /// <returns>Отсортированный массив</returns>
         static int[] sort(int[] arr)
         {
             bool needSort = true;
@@ -96,7 +131,13 @@ namespace array2
             }
             return arr;
         }
-        /*Метод нахождения половинным делением*/
+        /// <summary>
+        /// Метод поиска индекса числа половинным делением 
+        /// </summary>
+        /// <param name="array">статический массив</param>
+        /// <param name="number">число, индекс которого нужно найти</param>
+        /// <returns>если число есть то его индекс. 
+        /// Если числа нету -1</returns>
         static int HalfIntervalMethod(int[] array, int number)
         {
             int start = 0;
@@ -126,14 +167,16 @@ namespace array2
                 {
                     return center;
                 }
-                else
-                {
-                    return -1;
-                }
             }
+                            return -1;
         }
-        /*Метод создание динамического массива*/
-        static List<int> DinamicArray()
+        /// <summary>
+        /// Метод ввода пользователем чисел 
+        /// в динамический массив пока не будет введено 0
+        /// </summary>
+        /// <returns>Динамический массив с введенными
+        /// пользователем числами</returns>
+        static List<int> InputDimanicArray()
         {
             List<int> array = new List<int>();
             Console.WriteLine("Введите число");
@@ -145,7 +188,10 @@ namespace array2
             }
             return array;
         }
-        /*Метод вывода динамического массива*/
+        /// <summary>
+        /// Метод печати динамического массива
+        /// </summary>
+        /// <param name="array">динамический массив</param>
         static void SealDinamicArray(List<int> array)
         {
             for (int i = 0; i < array.Count - 1; i++)
@@ -154,7 +200,11 @@ namespace array2
             }
             Console.WriteLine(array[array.Count - 1]);
         }
-        /*Метод подсчёта суммы динамического массива*/
+        /// <summary>
+        /// Метод подсчёта суммы чисел динамического массива
+        /// </summary>
+        /// <param name="dinamicArray">динамический массив</param>
+        /// <returns>Сумма чисел динамического массива</returns>
         static int SumDinamicArray(List<int> dinamicArray)
         {
             int sum = 0;
@@ -164,30 +214,15 @@ namespace array2
             }
             return sum;
         }
-
-        static void Main(string[] args)
-        {            
-            /*Поиск половинным делением*/
-            int[] arrayForHalfIntervalMethod = RandomArr(10, 1, 10);
-            Seal(arrayForHalfIntervalMethod);
-            int foundIndexNumber = HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
-            if (foundIndexNumber > 0)
-                {
-                    Console.WriteLine($"Ваше число под индексом {foundIndexNumber}");
-                } 
-            else
-                {
-                    Console.WriteLine($"Такого числа нету");
-                }
-
-            /*Создание динамического массива и подсчет суммы*/
-            List<int> dinamicArray = DinamicArray();
-            SealDinamicArray(dinamicArray);           
-            Console.WriteLine($"Сумма ваших чисел {SumDinamicArray(dinamicArray)}");
-
-            /*Нахождение максимальной последовательности*/
-            /*Console.WriteLine("Введите размер массива");
-            int size = Convert.ToInt32(Console.ReadLine());
+        /// <summary>
+        /// Метод создания динамического массива 
+        /// рандомных чисел от 1 до 100
+        /// с заданной длиной 
+        /// </summary>
+        /// <param name="size">длинна массива</param>
+        /// <returns>Динамический массив рандомных чисел от 1 до 100</returns>
+        static List<int> RandomDinamicArray(int size)
+        {
             List<int> arr = new List<int>();
             Random rnd = new Random();
 
@@ -195,16 +230,46 @@ namespace array2
             {
                 arr.Add(rnd.Next(1, 100));
             }
-
-            for (int i = 0; i < arr.Count - 2; i++)
+            return arr;
+        }
+        /// <summary>
+        /// Нахождение последней максимальной последовательности
+        /// </summary>
+        /// <param name="arr">динамический массив</param>
+        /// <returns>последняя максимальная последовательность массива</returns>
+        static int MaxSequence(List<int> arr)
+        {
+            int sequence = 1;
+            int sequenceTwo = 1;
+            int maxSequence = 1;
+            int sequenceNumber = 1;
+            for (int i = 1; i < arr.Count - 1; i++)
             {
-                Console.Write($"{arr[i]},");
+                if (arr[i] >= arr[i - 1])
+                {
+                    sequence += 1;
+                }
+                else
+                {
+                    sequenceNumber += 1;
+                    if (sequence > sequenceTwo)
+                    {
+                        maxSequence = sequenceNumber;
+                    }
+                    sequence = 0;
+                }
+
             }
-            Console.WriteLine($"{arr[arr.Count - 1]}");
-
+            return maxSequence;
+        }
+        /// <summary>
+        /// Нахождение последней максимальной последовательности с помощью массивов
+        /// </summary>
+        /// <param name="arr">динамический массив</param>
+        /// <returns>последняя максимальная последовательность</returns>
+        static int MaxSequenceUsingArray(List<int> arr)
+        {
             List<int> sequenceLength = new List<int>();
-
-
             List<int> sequence = new List<int>();
             sequence.Add(arr[0]);
 
@@ -234,7 +299,36 @@ namespace array2
                     max = i;
                 }
             }
-            Console.WriteLine($"Максимальная последовательность {max}");*/
+            return max;
+        }
+        static void Main(string[] args)
+        {
+            #region поиск половинным делением
+            int[] arrayForHalfIntervalMethod = RandomArr(10, 1, 10);
+            SealArray(arrayForHalfIntervalMethod);
+            int foundIndexNumber = HalfIntervalMethod(arrayForHalfIntervalMethod, 3);
+            if (foundIndexNumber > 0)
+            {
+                Console.WriteLine($"Ваше число под индексом {foundIndexNumber}");
+            }
+            else
+            {
+                Console.WriteLine($"Такого числа нету");
+            }
+            #endregion
+            #region Создание динамического массива и подсчет суммы
+            List<int> dinamicArray = InputDimanicArray();
+            SealDinamicArray(dinamicArray);
+            Console.WriteLine($"Сумма ваших чисел {SumDinamicArray(dinamicArray)}");
+            #endregion
+            #region Нахождение максимальной последовательности
+            Console.WriteLine("Введите размер массива");
+            int size = Convert.ToInt32(Console.ReadLine());
+            List<int> arrForSearchSequence = RandomDinamicArray(size);
+            SealDinamicArray(arrForSearchSequence);
+            int maxSequence = MaxSequence(arrForSearchSequence);
+            Console.WriteLine($"Максимальная последовательность{maxSequence}");
+            #endregion
         }
     }
 }
