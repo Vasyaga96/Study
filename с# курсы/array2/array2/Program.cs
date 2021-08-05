@@ -1,15 +1,10 @@
-﻿#region using
-using System;
+﻿using System;
 using System.Collections.Generic;
-#endregion
-#region namespace
+
 namespace array2
 {
-    #endregion
-    #region class Program
     class Program
     {
-        #endregion
         /// <summary>
         /// Метод генерации массива случайным образом
         /// </summary>
@@ -240,9 +235,7 @@ namespace array2
         static int MaxSequence(List<int> arr)
         {
             int sequence = 1;
-            int sequenceTwo = 1;
-            int maxSequence = 1;
-            int sequenceNumber = 1;
+            int maxSequence = 0;
             for (int i = 1; i < arr.Count - 1; i++)
             {
                 if (arr[i] >= arr[i - 1])
@@ -251,14 +244,12 @@ namespace array2
                 }
                 else
                 {
-                    sequenceNumber += 1;
-                    if (sequence > sequenceTwo)
+                    if (sequence > maxSequence )
                     {
-                        maxSequence = sequenceNumber;
+                        maxSequence = sequence;
                     }
                     sequence = 0;
-                }
-
+                }            
             }
             return maxSequence;
         }
