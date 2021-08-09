@@ -1,0 +1,13 @@
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.exe
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.deps.json
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.runtimeconfig.json
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.runtimeconfig.dev.json
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.dll
+C:\Study\с# курсы\NumberInString\NumberInString\bin\Debug\netcoreapp3.1\NumberInString.pdb
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.csprojAssemblyReference.cache
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.AssemblyInfoInputs.cache
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.AssemblyInfo.cs
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.csproj.CoreCompileInputs.cache
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.dll
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.pdb
+C:\Study\с# курсы\NumberInString\NumberInString\obj\Debug\netcoreapp3.1\NumberInString.genruntimeconfig.cache
