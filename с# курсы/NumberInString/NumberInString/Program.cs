@@ -35,34 +35,34 @@ namespace NumberInString
                 int ten = three % 100 / 10;
                 int hund = three / 100;
                 string threeResult;
-                if (ten != 1 & hund >= 1 & ten != 0)
+                if (ten != 1 && hund >= 1 && ten != 0)
                 {
                     threeResult = ones[hund] + ' ' + hundred + ' ' + tens[ten] + ' ' + ones[one];
                 }
-                else if (ten == 0 & hund >= 1 & one > 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
-                }
-                else if (ten != 1 & hund >= 1 & ten == 0 & one < 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
-                }
-                else if (ten != 1 & hund >= 1 & ten == 0 & one == 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred;
-                }
-                else if (ten != 1 & hund < 1 & three > 9)
+                else if (ten != 1 && hund < 1 && three > 9)
                 {
                     threeResult = tens[ten] + ' ' + ones[one];
                 }
-                else if (ten == 1 & hund < 1)
+                else if (ten == 0 && hund >= 1 && one > 0)
                 {
-                    threeResult = teens[one];
+                    threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
                 }
-                else if (ten == 0 & hund == 0)
+                else if (ten == 0 && hund >= 1 && one < 0)
+                {
+                    threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
+                }
+                else if (ten == 0 && hund >= 1 && one == 0)
+                {
+                    threeResult = ones[hund] + ' ' + hundred;
+                }      
+                else if (ten == 0 && hund == 0)
                 {
                     threeResult = ones[one];
                 }
+                else if (ten == 1 && hund < 1)
+                {
+                    threeResult = teens[one];
+                }               
                 else
                 {
                     threeResult = ones[hund] + ' ' + hundred + ' ' + teens[one];

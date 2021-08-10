@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L7+iGqQTx6+oYb10WnlhEDfy+Uim92XYe5XDz2f1kyJ7Wjv8bWGnXT22SiZJWQ/HxnltS3wsJtTH/96Z6qyBkg==",
+  "dgSpecHash": "3pFcfLxOtV6M+F5Uvw81wQ9H2WSs1Lp1/o0fHRIRtD3da+s4Ud+AwsuqvzoP5g6B8ORgl/YZTDuzYwZGC0ljiQ==",
   "success": true,
-  "projectFilePath": "C:\\Study\\с# курсы\\String\\String\\Palindrome.csproj",
+  "projectFilePath": "C:\\Study\\с# курсы\\Palindrome\\String\\Palindrome.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

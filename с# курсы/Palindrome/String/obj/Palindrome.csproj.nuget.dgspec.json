@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Study\\с# курсы\\String\\String\\Palindrome.csproj": {}
+    "C:\\Study\\с# курсы\\Palindrome\\String\\Palindrome.csproj": {}
   },
   "projects": {
-    "C:\\Study\\с# курсы\\String\\String\\Palindrome.csproj": {
+    "C:\\Study\\с# курсы\\Palindrome\\String\\Palindrome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Study\\с# курсы\\String\\String\\Palindrome.csproj",
+        "projectUniqueName": "C:\\Study\\с# курсы\\Palindrome\\String\\Palindrome.csproj",
         "projectName": "Palindrome",
-        "projectPath": "C:\\Study\\с# курсы\\String\\String\\Palindrome.csproj",
+        "projectPath": "C:\\Study\\с# курсы\\Palindrome\\String\\Palindrome.csproj",
         "packagesPath": "C:\\Users\\Васяга 4 8 15 16 23\\.nuget\\packages\\",
-        "outputPath": "C:\\Study\\с# курсы\\String\\String\\obj\\",
+        "outputPath": "C:\\Study\\с# курсы\\Palindrome\\String\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
