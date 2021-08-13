@@ -36,61 +36,57 @@ namespace NumberInString
                 int hund = three / 100;
                 string threeResult = "";
 
-                #region единицы
-                if (ten == 0 && hund == 0)
+                if (hund == 0)
                 {
-                    threeResult = ones[one];
+                    if (ten == 0)
+                    {
+                        threeResult = ones[one];
+                    }
+                    else if(ten == 1)
+                    {
+                        threeResult = teens[one];
+                    }
+                    else if(ten > 1)
+                    {
+                        if(one == 0)
+                        {
+                            threeResult = tens[ten];
+                        }
+                        else if(one > 0)
+                        {
+                            threeResult = tens[ten] + ' ' + ones[one];
+                        }
+                    }
                 }
-                #endregion
-                #region от 10 до 19
-                else if (ten == 1 && hund < 1)
+                if (hund > 0 && hund < 10)
                 {
-                    threeResult = teens[one];
+                    if (ten == 0)
+                    {
+                        if(one == 0)
+                        {
+                            threeResult = ones[hund] + ' ' + hundred;
+                        }
+                        else if(one > 0)
+                        {
+                            threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
+                        }
+                    }
+                    else if(ten == 1)
+                    {
+                        threeResult = ones[hund] + ' ' + hundred + ' ' + teens[one];
+                    }
+                    else if(ten > 1)
+                    {
+                        if(one == 0)
+                        {
+                            threeResult = ones[hund] + ' ' + hundred + ' ' + tens[ten];
+                        }
+                        else if(one > 0)
+                        {
+                            threeResult = ones[hund] + ' ' + hundred + ' ' + tens[ten] + ' ' + ones[one];
+                        }
+                    }
                 }
-                #endregion
-                #region десятки
-                else if (hund == 0 && ten > 1 && one == 0)
-                {
-                    threeResult = tens[ten];
-                }
-                #endregion
-                #region десятки с единицами
-                else if (hund == 0 && ten > 1 && one > 0)
-                {
-                    threeResult = tens[ten] + ' ' + ones[one];
-                }
-                #endregion
-                #region сотни
-                else if (hund > 0 && hund < 10 && ten == 0 && one == 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred;
-                }
-                #endregion
-                #region сотни с единицами
-                else if (hund > 0 && hund < 10 && ten == 0 && one > 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' ' + ones[one];
-                }
-                #endregion
-                #region сотни с десятками от 20
-                else if (hund > 0 && hund < 10 && ten > 1 && one == 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' '+ tens[ten];
-                }
-                #endregion
-                #region сотни с десятками и единицами
-                else if (hund > 0 && hund < 10 && ten > 0 && one > 0)
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' ' + tens[ten] + ' ' + ones[one];
-                }
-                #endregion
-                #region сотни с (от 10 до 19)
-                /*if (hund > 0 && hund < 10 && ten == 1)*/
-                else
-                {
-                    threeResult = ones[hund] + ' ' + hundred + ' ' + teens[one];
-                }
-                #endregion
                 if (three == 0)
                 {
                     result = threeResult + result;
