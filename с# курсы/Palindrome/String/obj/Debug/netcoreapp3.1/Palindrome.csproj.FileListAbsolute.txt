@@ -1,0 +1,13 @@
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.exe
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.deps.json
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.runtimeconfig.json
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.runtimeconfig.dev.json
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.dll
+C:\Study\с# курсы\Palindrome\String\bin\Debug\netcoreapp3.1\Palindrome.pdb
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.csprojAssemblyReference.cache
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.AssemblyInfoInputs.cache
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.AssemblyInfo.cs
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.csproj.CoreCompileInputs.cache
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.dll
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.pdb
+C:\Study\с# курсы\Palindrome\String\obj\Debug\netcoreapp3.1\Palindrome.genruntimeconfig.cache
