@@ -11,26 +11,27 @@ namespace array_random_numbers_and_search_prime_numbers
             int n = Convert.ToInt32(Console.ReadLine());
 
             bool NumberPrime = true;
-            int[] arr = new int[n];
+            bool needSort = true;
+            int[] arrRandom = new int[n];
             List<int> arrPrimeNumbers = new List<int> {};
 
             Random rnd = new Random();
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arrRandom.Length; i++)
             {
-                arr[i] = rnd.Next(1, 100);
+                arrRandom[i] = rnd.Next(1, 100);
             }
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            for (int i = 0; i < arrRandom.Length - 1; i++)
             {
-                Console.Write($"{arr[i]}, ");
+                Console.Write($"{arrRandom[i]}, ");
             }
-            Console.WriteLine(arr[^1]);
+            Console.WriteLine(arrRandom[^1]);
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arrRandom.Length; i++)
             {
-                for(int j = arr[i] - 1; j > 1; j--)
+                for(int j = arrRandom[i] - 1; j > 1; j--)
                 {
-                    if(arr[i] % j == 0)
+                    if(arrRandom[i] % j == 0)
                     {
                         NumberPrime = false;
                         break;
@@ -38,10 +39,26 @@ namespace array_random_numbers_and_search_prime_numbers
                 }
                 if(NumberPrime == true)
                 {
-                    arrPrimeNumbers.Add(arr[i]);
+                    arrPrimeNumbers.Add(arrRandom[i]);
                 }
                 NumberPrime = true;
             }
+
+            while (needSort)
+            {
+                needSort = false;
+                for (int i = 0; i < arrPrimeNumbers.Count - 1; i++)
+                {
+                    if (arrPrimeNumbers[i] > arrPrimeNumbers[i + 1])
+                    {
+                        int k = arrPrimeNumbers[i];
+                        arrPrimeNumbers[i] = arrPrimeNumbers[i + 1];
+                        arrPrimeNumbers[i + 1] = k;
+                        needSort = true;
+                    }
+                }
+            }
+
             for (int i = 0; i < arrPrimeNumbers.Count - 1; i++)
             {
                 Console.Write($"{arrPrimeNumbers[i]}, ");
@@ -51,12 +68,12 @@ namespace array_random_numbers_and_search_prime_numbers
     }
 }
 
-/*if (arr[i] % j == 0)
+/*if (arrRandom[i] % j == 0)
 {
     break;
 }
 else
 {
-    arrPrimeNumbers.Add(arr[i]);
+    arrPrimeNumbers.Add(arrRandom[i]);
     break;
 }*/
