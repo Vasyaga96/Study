@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace array_random_numbers_and_search_prime_numbers
 {
@@ -9,7 +10,9 @@ namespace array_random_numbers_and_search_prime_numbers
             Console.WriteLine("Введите размер массива");
             int n = Convert.ToInt32(Console.ReadLine());
 
+            bool NumberPrime = true;
             int[] arr = new int[n];
+            List<int> arrPrimeNumbers = new List<int> {};
 
             Random rnd = new Random();
             for (int i = 0; i < arr.Length; i++)
@@ -25,15 +28,35 @@ namespace array_random_numbers_and_search_prime_numbers
 
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] == 1 || arr[i] == 2 || arr[i] == 3)
+                for(int j = arr[i] - 1; j > 1; j--)
                 {
-                    Console.WriteLine(arr[i]);
+                    if(arr[i] % j == 0)
+                    {
+                        NumberPrime = false;
+                        break;
+                    }
                 }
-                else if(arr[i] % 2 != 0 && arr[i] % 3 != 0 )
+                if(NumberPrime == true)
                 {
-                    Console.WriteLine(arr[i]);
+                    arrPrimeNumbers.Add(arr[i]);
                 }
+                NumberPrime = true;
             }
+            for (int i = 0; i < arrPrimeNumbers.Count - 1; i++)
+            {
+                Console.Write($"{arrPrimeNumbers[i]}, ");
+            }
+            Console.Write(arrPrimeNumbers[^1]);
         }
     }
 }
+
+/*if (arr[i] % j == 0)
+{
+    break;
+}
+else
+{
+    arrPrimeNumbers.Add(arr[i]);
+    break;
+}*/
