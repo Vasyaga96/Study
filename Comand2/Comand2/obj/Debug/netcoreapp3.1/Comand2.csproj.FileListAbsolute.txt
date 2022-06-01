@@ -1,0 +1,13 @@
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.exe
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.deps.json
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.runtimeconfig.json
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.runtimeconfig.dev.json
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.dll
+C:\Study\Comand2\Comand2\bin\Debug\netcoreapp3.1\Comand2.pdb
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.csprojAssemblyReference.cache
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.AssemblyInfoInputs.cache
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.AssemblyInfo.cs
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.csproj.CoreCompileInputs.cache
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.dll
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.pdb
+C:\Study\Comand2\Comand2\obj\Debug\netcoreapp3.1\Comand2.genruntimeconfig.cache
