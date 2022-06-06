@@ -25,27 +25,19 @@ namespace array_random_numbers_and_search_prime_numbers
             Console.WriteLine(arrRandom[^1]);
         }
 
-        static List<int> SearchPrimeNumbers(int[] arrRandom)
+        static bool SearchPrimeNumbers(int number)
         {
-            bool NumberPrime = true;
-            List<int> arrPrimeNumbers = new List<int> { };
-            for (int i = 0; i < arrRandom.Length; i++)
+            bool numberPrime = true;
+            for (int j = (int)Math.Sqrt(number); j > 1; j--)
             {
-                for (int j = (int)Math.Sqrt(arrRandom[i]); j > 1; j--)
+                numberPrime = true;
+                if (number % j == 0)
                 {
-                    NumberPrime = true;
-                    if (arrRandom[i] % j == 0)
-                    {
-                        NumberPrime = false;
-                        break;
-                    }
+                    numberPrime = false;
+                    break;
                 }
-                if (NumberPrime)
-                {
-                    arrPrimeNumbers.Add(arrRandom[i]);
-                }
-            }
-            return arrPrimeNumbers;
+            }    
+            return numberPrime;
         }
 
         static void PrintDinamic(List<int> arrRandom)
@@ -82,8 +74,15 @@ namespace array_random_numbers_and_search_prime_numbers
             Console.WriteLine("Введите размер массива");
             int n = Convert.ToInt32(Console.ReadLine());
             int[] randomArr = GenerationRandomArray(n);
-            PrintStatic(randomArr);
-            List<int>arrPrimeNumbers = SearchPrimeNumbers(randomArr);
+            List<int> arrPrimeNumbers = new List<int> { };
+            PrintStatic(randomArr);            
+            for (int i = 0; i < randomArr.Length; i++)
+            {
+                if (SearchPrimeNumbers(randomArr[i]))
+                {
+                    arrPrimeNumbers.Add(randomArr[i]);
+                }
+            }
             Sort(arrPrimeNumbers);
             PrintDinamic(arrPrimeNumbers);
         }
