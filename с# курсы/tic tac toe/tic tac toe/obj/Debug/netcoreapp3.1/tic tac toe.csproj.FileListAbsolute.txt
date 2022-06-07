@@ -1,0 +1,13 @@
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.csprojAssemblyReference.cache
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.AssemblyInfoInputs.cache
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.AssemblyInfo.cs
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.csproj.CoreCompileInputs.cache
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.exe
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.deps.json
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.runtimeconfig.json
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.runtimeconfig.dev.json
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.dll
+C:\Study\с# курсы\tic tac toe\tic tac toe\bin\Debug\netcoreapp3.1\tic tac toe.pdb
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.dll
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.pdb
+C:\Study\с# курсы\tic tac toe\tic tac toe\obj\Debug\netcoreapp3.1\tic tac toe.genruntimeconfig.cache
