@@ -20,21 +20,24 @@ namespace test
 			int lineNumber = int.Parse(Console.ReadLine());
 			Console.WriteLine("Выберете столбец от 1 до 3");
 			int columnNumber = int.Parse(Console.ReadLine());
-			while (lineNumber < 0 || lineNumber > 3 || columnNumber < 0 || columnNumber > 3)
+			while (lineNumber < 0 || lineNumber > 3 || columnNumber < 0 || columnNumber > 3 || arr[lineNumber - 1, columnNumber - 1] == "X" || arr[lineNumber - 1, columnNumber - 1] == "O")
 			{
-				Console.WriteLine("Попробуйте еще раз");
-				Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
-				lineNumber = int.Parse(Console.ReadLine());
-				Console.WriteLine("Выберете столбец от 1 до 3");
-				columnNumber = int.Parse(Console.ReadLine());
-			}
-			while (arr[lineNumber - 1, columnNumber - 1] == "X" || arr[lineNumber - 1, columnNumber - 1] == "O")
-			{
-				Console.WriteLine("Это место занято");
-				Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
-				lineNumber = int.Parse(Console.ReadLine());
-				Console.WriteLine("Выберете столбец от 1 до 3");
-				columnNumber = int.Parse(Console.ReadLine());
+				if (lineNumber < 0 || lineNumber > 3 || columnNumber < 0 || columnNumber > 3)
+				{
+					Console.WriteLine("Попробуйте еще раз");
+					Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
+					lineNumber = int.Parse(Console.ReadLine());
+					Console.WriteLine("Выберете столбец от 1 до 3");
+					columnNumber = int.Parse(Console.ReadLine());
+				}
+				else
+				{
+					Console.WriteLine("Это место занято");
+					Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
+					lineNumber = int.Parse(Console.ReadLine());
+					Console.WriteLine("Выберете столбец от 1 до 3");
+					columnNumber = int.Parse(Console.ReadLine());
+				}
 			}
 			arr[lineNumber - 1, columnNumber - 1] = player;
 			return arr;
@@ -42,7 +45,7 @@ namespace test
 
 		static bool Winner(string player, string[,] arr)
 		{
-			return (arr[0, 0] == $"{player}" & arr[0, 1] == $"{player}" & arr[0, 2] == $"{player}") || (arr[1, 0] == $"{player}" & arr[1, 1] == $"{player}" & arr[1, 2] == $"{player}") || (arr[2, 0] == $"{player}" & arr[2, 1] == $"{player}" & arr[2, 2] == $"{player}") || (arr[0, 0] == $"{player}" & arr[1, 0] == $"{player}" & arr[2, 0] == $"{player}") || (arr[0, 1] == $"{player}" & arr[1, 1] == $"{player}" & arr[2, 1] == $"{player}") || (arr[0, 2] == $"{player}" & arr[1, 2] == $"{player}" & arr[2, 2] == $"{player}") || (arr[0, 0] == $"{player}" & arr[1, 1] == $"{player}" & arr[2, 2] == $"{player}") || (arr[0, 2] == $"{player}" & arr[1, 1] == $"{player}" & arr[2, 0] == $"{player}");
+			return (arr[0, 0] == player & arr[0, 1] == player & arr[0, 2] == player) || (arr[1, 0] == player & arr[1, 1] == player & arr[1, 2] == player) || (arr[2, 0] == player & arr[2, 1] == player & arr[2, 2] == player) || (arr[0, 0] == player & arr[1, 0] == player & arr[2, 0] == player) || (arr[0, 1] == player & arr[1, 1] == player & arr[2, 1] == player) || (arr[0, 2] == player & arr[1, 2] == player & arr[2, 2] == player) || (arr[0, 0] == player & arr[1, 1] == player & arr[2, 2] == player) || (arr[0, 2] == player & arr[1, 1] == player & arr[2, 0] == player);
 		}	
 		static void Main(string[] args)
 		{
@@ -58,17 +61,12 @@ namespace test
 			PrintField(arr);
 			for (int i = 0; i < arr.Length; i++)
 			{
-				arr = Move(arr, $"{player}");
+				arr = Move(arr, player);
 				step += 1;
 				PrintField(arr);				
-				if (Winner($"{player}", arr))
+				if (Winner(player, arr))
                 {
 					Console.WriteLine($"победил игрок {player}");
-					break;
-				}
-				if (step == 9)
-				{
-					Console.WriteLine("Ничья");
 					break;
 				}
 				if (player == "X")
@@ -80,6 +78,7 @@ namespace test
 					player = "X";
                 }
 			}
+			Console.WriteLine("Ничья");
 		}
 	}	
 }
