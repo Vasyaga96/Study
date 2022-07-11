@@ -1,0 +1,11 @@
+.title{
+    font-family: Arial, sans-serif; /*шрифт*/
+    font-weight: 100; /*толщина букв*/
+    font-size: 45px; /*размер букв*/
+    font-style: italic; /* наклонный */
+    text-align: center; /* выравнивание текста */
+    color: rgb(204, 77, 77) /*цвет*/
+}
+.text{
+    line-height: 25px; /*отступ между строками*/
+}

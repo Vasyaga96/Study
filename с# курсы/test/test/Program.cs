@@ -25,19 +25,15 @@ namespace test
 				if (lineNumber < 0 || lineNumber > 3 || columnNumber < 0 || columnNumber > 3)
 				{
 					Console.WriteLine("Попробуйте еще раз");
-					Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
-					lineNumber = int.Parse(Console.ReadLine());
-					Console.WriteLine("Выберете столбец от 1 до 3");
-					columnNumber = int.Parse(Console.ReadLine());
 				}
 				else
 				{
 					Console.WriteLine("Это место занято");
-					Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
-					lineNumber = int.Parse(Console.ReadLine());
-					Console.WriteLine("Выберете столбец от 1 до 3");
-					columnNumber = int.Parse(Console.ReadLine());
 				}
+				Console.WriteLine($"Сейчас ходит игрок {player} \n Выберете строку от 1 до 3");
+				lineNumber = int.Parse(Console.ReadLine());
+				Console.WriteLine("Выберете столбец от 1 до 3");
+				columnNumber = int.Parse(Console.ReadLine());
 			}
 			arr[lineNumber - 1, columnNumber - 1] = player;
 			return arr;

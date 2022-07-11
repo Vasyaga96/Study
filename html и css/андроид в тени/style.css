@@ -1,6 +1,0 @@
-div {
-    width: 64px; /*ширина*/
-    height: 64px; /*высота*/
-    box-shadow: inset 0 0 5px; /*параметры тени*/
-    background: url(android.png) 50% 50% no-repeat; /*фоновый рисунок*/
-}
