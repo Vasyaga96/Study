@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Киномонстр</title>
+    <title>Киномонстр Bootstrap</title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,26 +21,60 @@
     <![endif]-->
   </head>
   <body>
+    
+
     <div class="container-fluid">
-        <div class="row">
-           <nav role="navigation" class="navbar navbar-inverse">
-                <div class="container">
+      <div class="row">
+       
+       <nav role="navigation" class="navbar navbar-inverse">
+          <div class="container">
 
-                    <div id="navabarCollapse" class="collapse navabar-collapse navbar-right">
+          <div class="navbar-header header">
 
-                        <ul class="nav">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-
-                    </div>  
-
+            <div class="container">
+              
+              <div class="row">
+                
+                <div class="col-lg-12">
+                  <h1><a href="#">КиноМонстр</a></h1> 
+                  <p>Кино - наша страсть!</p>
                 </div>
-           </nav>
-        </div>
+
+              </div>
+
+            </div>
+
+            
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+              
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+
+            </button>
+          
+
+          </div>
+            
+            <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
+              
+              <ul class="nav nav-pills">
+                <li class="active"> <a href="#">Главная</a> </li>
+                <li> <a href="#">Фильмы</a> </li>
+                <li> <a href="#">Сериалы</a> </li>
+                <li> <a href="#">Рейтинг фильмов</a> </li>
+                <li> <a href="#">Контакты</a> </li>
+
+              </ul>
+
+
+            </div>
+
+          </div>
+       </nav> 
+
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
