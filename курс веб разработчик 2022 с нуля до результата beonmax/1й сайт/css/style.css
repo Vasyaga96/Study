@@ -60,6 +60,8 @@ h2.title {
 }
 
 .promo .promo_text {
+    padding: 0 13px;
+    margin-top: 23px;
     color: #ffffff;
     font-size: 21px;
     font-weight: 300;
@@ -73,4 +75,10 @@ h2.title {
     color: #f9bf3b;
     font-family: "Roboto- Bold";
     font-weight: 700;
+}
+
+.promo .promo_btn {
+    width: 313px;
+    height: 72px;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18);
 }
